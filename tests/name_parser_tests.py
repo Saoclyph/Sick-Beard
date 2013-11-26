@@ -29,6 +29,21 @@ simple_test_cases = {
               'Show-Name-S06E01-1080i': parser.ParseResult(None, 'Show-Name', 6, [1], '1080i' ),
               'Show.Name.S06E01.Other.WEB-DL': parser.ParseResult(None, 'Show Name', 6, [1], 'Other.WEB-DL' ),
               'Show.Name.S06E01 Some-Stuff Here': parser.ParseResult(None, 'Show Name', 6, [1], 'Some-Stuff Here' ),
+              'Mr.Show.Name.S01EP02.Source.Quality.Etc-Group': parser.ParseResult(None, 'Mr Show Name', 1, [2], 'Source.Quality.Etc', 'Group'),
+              'Show.Name.S01EP02': parser.ParseResult(None, 'Show Name', 1, [2]),
+              'Show Name - S01EP02 - My Ep Name': parser.ParseResult(None, 'Show Name', 1, [2], 'My Ep Name'),
+              'Show.1.0.Name.S01.EP03.My.Ep.Name-Group': parser.ParseResult(None, 'Show 1.0 Name', 1, [3], 'My.Ep.Name', 'Group'),
+              'Show.Name.S01EP02EP03.Source.Quality.Etc-Group': parser.ParseResult(None, 'Show Name', 1, [2,3], 'Source.Quality.Etc', 'Group'),
+              'Mr. Show Name - S01EP02-03 - My Ep Name': parser.ParseResult(None, 'Mr. Show Name', 1, [2,3], 'My Ep Name'),
+              'Show.Name.S01.EP02.EP03': parser.ParseResult(None, 'Show Name', 1, [2,3]),
+              'Show.Name-0.2010.S01EP02.Source.Quality.Etc-Group': parser.ParseResult(None, 'Show Name-0 2010', 1, [2], 'Source.Quality.Etc', 'Group'),
+              'S01EP02 Ep Name': parser.ParseResult(None, None, 1, [2], 'Ep Name'),
+              'Show Name - S06EP01 - 2009-12-20 - Ep Name': parser.ParseResult(None, 'Show Name', 6, [1], '2009-12-20 - Ep Name'),
+              'Show Name - S06EP01 - -30-': parser.ParseResult(None, 'Show Name', 6, [1], '30-' ),
+              'Show-Name-S06EP01-720p': parser.ParseResult(None, 'Show-Name', 6, [1], '720p' ),
+              'Show-Name-S06EP01-1080i': parser.ParseResult(None, 'Show-Name', 6, [1], '1080i' ),
+              'Show.Name.S06EP01.Other.WEB-DL': parser.ParseResult(None, 'Show Name', 6, [1], 'Other.WEB-DL' ),
+              'Show.Name.S06EP01 Some-Stuff Here': parser.ParseResult(None, 'Show Name', 6, [1], 'Some-Stuff Here' ),
               },
               
               'fov': {
@@ -50,6 +65,10 @@ simple_test_cases = {
               'Show.Name.S01E02.S01E03': parser.ParseResult(None, 'Show Name', 1, [2,3]),
               'Show Name - S01E02 - S01E03 - S01E04 - Ep Name': parser.ParseResult(None, 'Show Name', 1, [2,3,4], 'Ep Name'),
               'Show.Name.S01E02.S01E03.WEB-DL': parser.ParseResult(None, 'Show Name', 1, [2,3], 'WEB-DL'),
+              'Show.Name.S01EP02.S01EP03.Source.Quality.Etc-Group': parser.ParseResult(None, 'Show Name', 1, [2,3], 'Source.Quality.Etc', 'Group'),
+              'Show.Name.S01EP02.S01EP03': parser.ParseResult(None, 'Show Name', 1, [2,3]),
+              'Show Name - S01EP02 - S01EP03 - S01EP04 - Ep Name': parser.ParseResult(None, 'Show Name', 1, [2,3,4], 'Ep Name'),
+              'Show.Name.S01EP02.S01EP03.WEB-DL': parser.ParseResult(None, 'Show Name', 1, [2,3], 'WEB-DL'),
               },
               
               'fov_repeat': {

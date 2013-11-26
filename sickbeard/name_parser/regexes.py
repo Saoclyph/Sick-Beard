@@ -25,9 +25,9 @@ ep_regexes = [
                '''
                ^(?P<series_name>.+?)[. _-]+                # Show_Name and separator
                s(?P<season_num>\d+)[. _-]*                 # S01 and optional separator
-               e(?P<ep_num>\d+)                            # E02 and separator
+               ep?(?P<ep_num>\d+)                          # E02 or EP02 and separator
                ([. _-]+s(?P=season_num)[. _-]*             # S01 and optional separator
-               e(?P<extra_ep_num>\d+))+                    # E03/etc and separator
+               ep?(?P<extra_ep_num>\d+))+                  # E03/etc or EP03/etc and separator
                [. _-]*((?P<extra_info>.+?)                 # Source_Quality_Etc-
                ((?<![. _-])(?<!WEB)                        # Make sure this is really the release group
                -(?P<release_group>[^- ]+))?)?$              # Group
@@ -57,9 +57,9 @@ ep_regexes = [
                '''
                ^((?P<series_name>.+?)[. _-]+)?             # Show_Name and separator
                s(?P<season_num>\d+)[. _-]*                 # S01 and optional separator
-               e(?P<ep_num>\d+)                            # E02 and separator
-               (([. _-]*e|-)                               # linking e/- char
-               (?P<extra_ep_num>(?!(1080|720)[pi])\d+))*   # additional E03/etc
+               ep?(?P<ep_num>\d+)                          # E02 or EP02 and separator
+               (([. _-]*ep?|-)                             # linking e/- char
+               (?P<extra_ep_num>(?!(1080|720)[pi])\d+))*   # additional E03/etc or EP03/etc
                [. _-]*((?P<extra_info>.+?)                 # Source_Quality_Etc-
                ((?<![. _-])(?<!WEB)                        # Make sure this is really the release group
                -(?P<release_group>[^- ]+))?)?$              # Group
